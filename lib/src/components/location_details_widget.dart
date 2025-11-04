@@ -29,7 +29,7 @@ class LocationDetailsWidget extends StatelessWidget {
                 color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold),
           ),
           const SizedBox(
-            height: 3,
+            height: 2,
           ),
           Text(
             locationData?.subLocation ?? "Loading ..",
@@ -40,7 +40,7 @@ class LocationDetailsWidget extends StatelessWidget {
                 color: Colors.white, fontSize: 12, fontWeight: FontWeight.w500),
           ),
           const SizedBox(
-            height: 2,
+            height: 1,
           ),
           Text(
             "Lat ${locationData?.latitude ?? "Loading.."}",
@@ -48,10 +48,10 @@ class LocationDetailsWidget extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             softWrap: false,
             style: const TextStyle(
-                color: Colors.white, fontSize: 12, fontWeight: FontWeight.w500),
+                color: Colors.white, fontSize: 11, fontWeight: FontWeight.w500),
           ),
           const SizedBox(
-            height: 2,
+            height: 1,
           ),
           Text(
             "Long ${locationData?.longitude ?? "Loading.."}",
@@ -59,10 +59,10 @@ class LocationDetailsWidget extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             softWrap: false,
             style: const TextStyle(
-                color: Colors.white, fontSize: 12, fontWeight: FontWeight.w500),
+                color: Colors.white, fontSize: 11, fontWeight: FontWeight.w500),
           ),
           const SizedBox(
-            height: 2,
+            height: 1,
           ),
           Text(
             dateTime ?? "Loading...",
@@ -70,7 +70,7 @@ class LocationDetailsWidget extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             softWrap: false,
             style: const TextStyle(
-                color: Colors.white, fontSize: 12, fontWeight: FontWeight.w500),
+                color: Colors.white, fontSize: 11, fontWeight: FontWeight.w500),
           ),
         ],
       ),
