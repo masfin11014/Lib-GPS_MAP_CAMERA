@@ -13,7 +13,7 @@ class LocationDetailsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
           color: Colors.black.withValues(alpha: 0.5)),
@@ -26,7 +26,7 @@ class LocationDetailsWidget extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             softWrap: false,
             style: const TextStyle(
-                color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+                color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold),
           ),
           const SizedBox(
             height: 5,
@@ -40,7 +40,7 @@ class LocationDetailsWidget extends StatelessWidget {
                 color: Colors.white, fontSize: 12, fontWeight: FontWeight.w500),
           ),
           const SizedBox(
-            height: 5,
+            height: 3,
           ),
           Text(
             "Lat ${locationData?.latitude ?? "Loading.."}",
@@ -51,7 +51,7 @@ class LocationDetailsWidget extends StatelessWidget {
                 color: Colors.white, fontSize: 12, fontWeight: FontWeight.w500),
           ),
           const SizedBox(
-            height: 5,
+            height: 3,
           ),
           Text(
             "Long ${locationData?.longitude ?? "Loading.."}",
@@ -62,7 +62,7 @@ class LocationDetailsWidget extends StatelessWidget {
                 color: Colors.white, fontSize: 12, fontWeight: FontWeight.w500),
           ),
           const SizedBox(
-            height: 5,
+            height: 3,
           ),
           Text(
             dateTime ?? "Loading...",
