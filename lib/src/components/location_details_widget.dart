@@ -26,7 +26,7 @@ class LocationDetailsWidget extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             softWrap: false,
             style: const TextStyle(
-                color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold),
+                color: Colors.white, fontSize: 12, fontWeight: FontWeight.bold),
           ),
           const SizedBox(
             height: 2,
@@ -37,7 +37,7 @@ class LocationDetailsWidget extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             softWrap: false,
             style: const TextStyle(
-                color: Colors.white, fontSize: 12, fontWeight: FontWeight.w500),
+                color: Colors.white, fontSize: 11, fontWeight: FontWeight.w500),
           ),
           const SizedBox(
             height: 1,
