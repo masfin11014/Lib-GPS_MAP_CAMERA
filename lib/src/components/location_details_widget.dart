@@ -29,7 +29,7 @@ class LocationDetailsWidget extends StatelessWidget {
                 color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold),
           ),
           const SizedBox(
-            height: 5,
+            height: 3,
           ),
           Text(
             locationData?.subLocation ?? "Loading ..",
@@ -40,7 +40,7 @@ class LocationDetailsWidget extends StatelessWidget {
                 color: Colors.white, fontSize: 12, fontWeight: FontWeight.w500),
           ),
           const SizedBox(
-            height: 3,
+            height: 2,
           ),
           Text(
             "Lat ${locationData?.latitude ?? "Loading.."}",
@@ -51,7 +51,7 @@ class LocationDetailsWidget extends StatelessWidget {
                 color: Colors.white, fontSize: 12, fontWeight: FontWeight.w500),
           ),
           const SizedBox(
-            height: 3,
+            height: 2,
           ),
           Text(
             "Long ${locationData?.longitude ?? "Loading.."}",
@@ -62,7 +62,7 @@ class LocationDetailsWidget extends StatelessWidget {
                 color: Colors.white, fontSize: 12, fontWeight: FontWeight.w500),
           ),
           const SizedBox(
-            height: 3,
+            height: 2,
           ),
           Text(
             dateTime ?? "Loading...",
