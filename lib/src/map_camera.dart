@@ -15,12 +15,15 @@ class MapCameraLocation extends StatefulWidget {
   final GalleryClickCallback? onGalleryClick;
   final VideoClickCallback? onVideoClick;
   final String? btnText;
+  final bool? showGallery;
+  final bool? showVideo;
+
   /// Constructs a MapCameraLocation widget.
   ///
   /// The [camera] parameter is required and represents the camera to be used for capturing images.
   /// The [onImageCaptured] parameter is an optional callback function that will be triggered when an image and location data are captured.
   const MapCameraLocation(
-      {super.key, required this.camera,required this.onImageCaptured,required this.onGalleryClick,required this.onVideoClick,required this.btnText});
+      {super.key, required this.camera,required this.onImageCaptured,required this.onGalleryClick,required this.onVideoClick,required this.btnText,required this.showGallery,required this.showVideo});
 
   @override
   State<MapCameraLocation> createState() => _MapCameraLocationState();
@@ -249,8 +252,9 @@ class _MapCameraLocationState extends State<MapCameraLocation> {
         crossAxisAlignment: CrossAxisAlignment.end,
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-
+          if(widget.showGallery!)
           FloatingActionButton(
+            heroTag: "gallery_fab",
             onPressed: () async {
               widget.onGalleryClick!();
             },
@@ -265,6 +269,7 @@ class _MapCameraLocationState extends State<MapCameraLocation> {
           ),
           SizedBox(width: 10,),
           FloatingActionButton(
+            heroTag: "photo_fab",
             onPressed: () async {
               try {
                 await _initializeControllerFuture;
@@ -286,6 +291,7 @@ class _MapCameraLocationState extends State<MapCameraLocation> {
             ),
           ),
           SizedBox(width: 10,),
+          if(widget.showVideo!)
           ElevatedButton(onPressed: (){
             widget.onVideoClick!();
           }, child: Text(widget.btnText!))
