@@ -63,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
             print('Longitude: ${data.longitude}');
             print('Location name: ${data.locationName}');
             print('Sublocation: ${data.subLocation}');
-          },
+          }, onGalleryClick: () {  }, onVideoClick: () {  }, btnText: '',
         ));
   }
 }
