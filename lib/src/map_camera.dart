@@ -17,14 +17,14 @@ class MapCameraLocation extends StatefulWidget {
   final String? btnText;
   final bool? showGallery;
   final bool? showVideo;
-  final bool? showPhoto;
+  bool? showPhoto=true;
 
   /// Constructs a MapCameraLocation widget.
   ///
   /// The [camera] parameter is required and represents the camera to be used for capturing images.
   /// The [onImageCaptured] parameter is an optional callback function that will be triggered when an image and location data are captured.
-  const MapCameraLocation(
-      {super.key, required this.camera,required this.onImageCaptured,required this.onGalleryClick,required this.onVideoClick,required this.btnText,required this.showGallery,required this.showVideo, required this.showPhoto});
+  MapCameraLocation(
+      {super.key, required this.camera,required this.onImageCaptured,required this.onGalleryClick,required this.onVideoClick,required this.btnText,required this.showGallery,required this.showVideo, this.showPhoto});
 
   @override
   State<MapCameraLocation> createState() => _MapCameraLocationState();
@@ -282,7 +282,7 @@ class _MapCameraLocationState extends State<MapCameraLocation> {
               }
             },
             //child: const Icon(Icons.camera_alt),
-            child: (widget.showPhoto) ? Column(
+            child: (widget.showPhoto ?? false) ? Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
