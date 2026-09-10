@@ -56,6 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text(widget.title),
         ),
         body: MapCameraLocation(
+          showPhoto: true,
           showGallery: true,
           showVideo: true,
           camera: widget.camera,
