@@ -269,7 +269,7 @@ class _MapCameraLocationState extends State<MapCameraLocation> {
             ),
           ),
           SizedBox(width: 10,),
-          FloatingActionButton(
+          (widget.showPhoto ?? false) ?   FloatingActionButton(
             heroTag: "photo_fab",
             onPressed: () async {
               try {
@@ -282,15 +282,15 @@ class _MapCameraLocationState extends State<MapCameraLocation> {
               }
             },
             //child: const Icon(Icons.camera_alt),
-            child: (widget.showPhoto ?? false) ? Column(
+            child:  Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Icon(Icons.camera_alt),
                 Text("Photo",style: TextStyle(fontSize: 10),)
               ],
-            ): Offstage(),
-          ),
+            ),
+          ) :Offstage(),
           SizedBox(width: 10,),
           if(widget.showVideo!)
           ElevatedButton(onPressed: (){
